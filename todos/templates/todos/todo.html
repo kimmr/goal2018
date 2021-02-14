@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files%}
+    <link rel="stylesheet" href="{% static "todos/todo.css"%}">
+    <link rel="stylesheet" href="{% static "todos/includes/header.css"%}">
+{% endblock %}
+
+{% block page_title%}
+{{ month|title }} 2018
+{% endblock %}
+
+{% block content%}
+    {% include "todos/includes/header.html"%}
+     <h1>{{ month|title }}</h1>
+        {% if text is not None %}
+            <h2>{{ text }}</h2>
+        {% else %}
+            <p class="fallback">There is no todo for {{month|title}}</p>     
+        {% endif %}
+{% endblock %}

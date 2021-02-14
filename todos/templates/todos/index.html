@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files%}
+    <link rel="stylesheet" href="{% static "todos/todos.css"%}">
+    <link rel="stylesheet" href="{% static "todos/includes/header.css"%}">
+{% endblock %}
+
+{% block page_title %}
+Goal 2018
+{% endblock %}
+
+{% block content%}
+    {% include "todos/includes/header.html"%}
+     <ul>
+     {% for month in months %}
+         <li><a href={% url "url_month" month %}>{{ month|title }}</a></li>
+     {% endfor %}
+     </ul>
+{% endblock%}
