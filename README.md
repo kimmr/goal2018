@@ -6,18 +6,21 @@
 * [Setup](#setup)
 
 ## General info
-This project is simple Lorem ipsum dolor generator.
+This project is simple django dummy project where I set goals/todos for each month in the year of 2018
 	
 ## Technologies
 Project is created with:
-* Lorem version: 12.3
-* Ipsum version: 2.33
-* Ament library version: 999
+* Python3
+* Django
+* html/css
 	
 ## Setup
-To run this project, install it locally using npm:
+To run this project:
 
 ```
-$ cd ../lorem
-$ npm install
-$ npm start
+$ python3 -m pip install Django
+$ cd ../goal2018
+$ python3 manage.py runserver
+```
+
+will run on http://127.0.0.1:8000/todos
